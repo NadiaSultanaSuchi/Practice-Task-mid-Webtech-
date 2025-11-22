@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+.user-card {
+    position: relative; /* Needed for absolute positioning of badge */
+    width: 200px;
+    padding: 20px;
+    background-color: wheat;
+    border: 1px solid black;
+    border-radius: 15px;
+   
+    text-align: center;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.user-name {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.user-bio {
+    font-size: 14px;
+    color: black;
+}
+
+.badge {
+    position: absolute; 
+    top: 20px;
+    right: 10px;
+    background-color: green;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+}
