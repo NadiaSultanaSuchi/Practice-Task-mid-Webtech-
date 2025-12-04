@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="startClock()" style="background-color: lightblue; text-align: center;">
+
+<h1> Digital Clock</h1>
+
+<div id="clock"></div>
+
+<script>
+function startClock() {
+  setInterval(showTime, 900);
+  showTime();
+}
+
+function showTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+
+  let time = "AM";
+  if (h >= 12) {
+    time = "PM";
+  }
+
+  h = h % 12;
+  if (h === 0) {
+    h = 12;
+  }
+
+  h = checkTime(h);
+  m = checkTime(m);
+  s = checkTime(s);
+
+  document.getElementById('clock').innerHTML = h + ":" + m + ":" + s + " " + time;
+}
+
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+</script>
+
+</body>
+</html>

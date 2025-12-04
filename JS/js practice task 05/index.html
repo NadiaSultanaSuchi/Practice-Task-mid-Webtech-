@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="script.js" defer></script>
+    <title>Text Analyzer</title>
+
+    <style>
+
+     body {
+
+  background-color: rgb(196, 241, 245);
+ 
+}
+        textarea {
+            width: 100%;
+            height: 300px;
+        }
+
+        #result-box {
+            border: 1px solid black;
+            width: 100%;
+            margin-top: 15px;
+            padding: 30px;
+           
+        }
+    </style>
+</head>
+<body>
+
+<h3>Text Analyzer</h3>
+
+<textarea id="text-field" placeholder="Enter your text here"></textarea>
+<br><br>
+
+<button id="analyzeBtn">Analyze Text</button>
+
+<div id="result-box">
+    <p>Total Characters: <span id="character-count">0</span></p>
+    <p>Total Words: <span id="word-count">0</span></p>
+    <p>Reversed Text:</p>
+    <p id="reverse-text"></p>
+</div>
+
+</body>
+</html>

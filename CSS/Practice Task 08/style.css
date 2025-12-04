@@ -1,0 +1,24 @@
+#div1, #div2, #div3, #div4 {
+    width: 300px;           
+    height: 200px;   
+    background-color: wheat;       
+    border: 1px solid black;
+    padding: 40px;
+    margin-bottom: 20px;  
+}
+
+#div1{
+    overflow: visible; 
+}
+
+#div2 {
+    overflow: hidden;  
+}
+
+#div3 {
+    overflow: scroll;  
+}
+
+#div4 {
+    overflow: auto;    
+}

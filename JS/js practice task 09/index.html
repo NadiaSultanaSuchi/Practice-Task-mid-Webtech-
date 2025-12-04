@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="title" content="My personal portfolio website">
+    <meta name="author" content="Nadia Sultana Suchi">
+    <meta name="description" content="This is my personal portfolio website for internship preparation">
+    <meta name="keywords" content="website,Portfolio, Internship">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Nadia Sultana Suchi Portfolio</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: rgb(183, 223, 238);
+        }
+
+        header, footer {
+            text-align: center;
+            margin-bottom: 10;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+
+    </style>
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Nadia Sultana Suchi</h1>
+        <p id="greeting"></p>
+        <button id="themeBtn">Switch to Dark Mode</button>
+        <nav>
+            <a href="#" onclick="showSection('bio'); return false;">About Me</a> |
+            <a href="#" onclick="showSection('education'); return false;">Education</a> |
+            <a href="#" onclick="showSection('contact'); return false;">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="bio" class="section">
+            <h2>About Me</h2>
+            <p>
+                I am a Computer Science student preparing for an internship. 
+                I am passionate about web development, programming, and learning new technologies.
+            </p>
+        </section>
+
+        <section id="education" class="section" style="display:none;">
+            <h2>Academic Details</h2>
+            <table>
+                <caption>Personal Information</caption>
+                <tr>
+                    <th>Degree</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                </tr>
+                <tr>
+                    <td>BSc in Computer Science</td>
+                    <td>American International University- Bangladesh</td>
+                    <td>2023–Present</td>
+                </tr>
+                <tr>
+                    <td>HSC</td>
+                    <td>Bangladesh Gas Fields School & College, Brahmanbaria</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>SSC</td>
+                    <td>Govt. Model Girls' High School, Brahmanbaria</td>
+                    <td>2019</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact" class="section" style="display:none;">
+            <h2>Contact Me</h2>
+            <form onsubmit="return submitForm();">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name">
+                <span id="nameERR"></span><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email">
+                <span id="emailERR"></span><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message"></textarea>
+                <span id="msgERR"></span><br><br>
+
+                <button type="submit">Send</button>
+                <p id="successMsg"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Nadia Sultana Suchi — All Rights Reserved</p>
+    </footer>
+</body>
+</html>

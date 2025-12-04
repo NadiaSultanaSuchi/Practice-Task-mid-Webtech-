@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simple Image Slider</title>
+<style>
+  body {
+    text-align: center;
+    background-color: wheat;
+  }
+  #slider {
+    width: 90%;
+  }
+  
+</style>
+</head>
+<body>
+
+<h2>Simple Image Slider</h2>
+
+<img id="slider" src="" alt="Slider Image">
+
+<br>
+<button onclick="prevImage()">Previous</button>
+<button onclick="nextImage()">Next</button>
+
+<script>
+ 
+  const images = [
+    "D:/Downloads/image/Rangamati.jpeg",
+    "D:/Downloads/image/Brahmanbaria.jpeg"
+  ];
+
+
+  let index = 0;
+
+  let slider = document.getElementById("slider");
+
+  slider.src = images[index];
+
+  function nextImage() {
+    index++;
+    if (index >= images.length) {
+      index = 0; 
+    }
+    slider.src = images[index];
+  }
+
+  function prevImage() {
+    index--;
+    if (index < 0) {
+      index = images.length - 1; 
+    }
+    slider.src = images[index];
+  }
+
+
+  setInterval(nextImage, 3000);
+</script>
+
+</body>
+</html>

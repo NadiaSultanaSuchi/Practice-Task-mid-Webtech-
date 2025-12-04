@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Form Field</title>
+    <style>
+       
+        form {
+            background-color: skyblue; 
+            padding: 40px;
+            width: 250px;
+        
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    const form = document.createElement("form");
+
+    const select = document.createElement("select");
+    select.id = "userType";
+
+    const option1 = document.createElement("option");
+    option1.value = "";
+    option1.textContent = "-- Select --";
+
+    const op2 = document.createElement("option");
+    op2.value = "student";
+    op2.textContent = "Student";
+
+    const op3 = document.createElement("option");
+    op3.value = "teacher";
+    op3.textContent = "Teacher";
+
+    select.append(option1, op2, op3);
+    form.appendChild(select);
+
+    const roll = document.createElement("input");
+    roll.type = "text";
+    roll.placeholder = "Roll Number";
+    roll.id = "rollField";
+    roll.style.display = "none";  
+    form.appendChild(roll);
+
+    const dept = document.createElement("input");
+    dept.type = "text";
+    dept.placeholder = "Department";
+    dept.id = "deptField";
+    dept.style.display = "none";  
+    form.appendChild(dept);
+
+    document.body.appendChild(form);
+
+    select.addEventListener("change", userType);
+
+   function userType() { let type = select.value; 
+   if (type === "student")  { 
+    roll.style.display = "block";
+    dept.style.display = "none"; 
+    } 
+    else if (type === "teacher") { 
+        dept.style.display = "block"; roll.style.display = "none"; 
+        } 
+        else { 
+            roll.style.display = "none"; 
+            dept.style.display = "none";
+             } 
+             }
+</script>
+
+</body>
+</html>

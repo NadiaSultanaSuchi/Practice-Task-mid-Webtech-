@@ -1,0 +1,25 @@
+#div1, #div2, #div3 {
+    display: inline-block;
+    height: 400px;
+    border: 2px solid black;
+    padding: 10px;     
+    box-sizing: border-box;        
+    vertical-align: top;
+      
+
+}
+#div1 {
+    width: 20%;
+    background-color: wheat;
+}
+
+#div2 {
+    width: 60%;
+   background-color: purple;
+}
+
+#div3 {
+    width: 20%;
+    background-color: skyblue;
+   
+}

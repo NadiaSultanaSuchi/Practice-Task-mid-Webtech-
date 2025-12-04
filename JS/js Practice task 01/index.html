@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <form onsubmit="return validateForm()">
+
+        <label>Full Name</label><br>
+        <input type="text" id="nameTF">
+        <span style="color:red" id="nameERR"></span><br><br>
+
+        <label>Email</label><br>
+        <input type="text" id="emailTF">
+        <span style="color:red" id="emailERR"></span><br><br>
+
+        <label>Password</label><br>
+        <input type="password" id="passwordTF">
+        <span style="color:red" id="passwordERR"></span><br><br>
+
+        <label>Confirm Password</label><br>
+        <input type="password" id="confirmPasswordTF">
+        <span style="color:red" id="confirmERR"></span><br><br>
+
+        <label>Phone Number</label><br>
+        <input type="text" id="phoneTF">
+        <span style="color:red" id="phoneERR"></span><br><br>
+
+        <input type="submit" value="Submit">
+
+        <h3 id="successMSG" style="color:green"></h3>
+
+    </form>
+
+</body>
+</html>

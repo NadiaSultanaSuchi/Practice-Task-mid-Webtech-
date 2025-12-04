@@ -8,7 +8,7 @@ body {
 }
 
 .user-card {
-    position: relative; /* Needed for absolute positioning of badge */
+    position: relative; 
     width: 200px;
     padding: 20px;
     background-color: wheat;
